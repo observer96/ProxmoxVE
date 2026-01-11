@@ -5,9 +5,9 @@
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://github.com/martabal/qbittorrent-exporter
 
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/core.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/tools.func)
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/error_handler.func)
+source <(curl -fsSL https://raw.githubusercontent.com/observer96/ProxmoxVE/refs/heads/nvidia-regression-2/misc/core.func)
+source <(curl -fsSL https://raw.githubusercontent.com/observer96/ProxmoxVE/refs/heads/nvidia-regression-2/misc/tools.func)
+source <(curl -fsSL https://raw.githubusercontent.com/observer96/ProxmoxVE/refs/heads/nvidia-regression-2/misc/error_handler.func)
 
 # Enable error handling
 set -Eeuo pipefail
@@ -169,7 +169,7 @@ EOF
   cat <<'UPDATEEOF' >/usr/local/bin/update_qbittorrent-exporter
 #!/usr/bin/env bash
 # qbittorrent-exporter Update Script
-type=update bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/addon/qbittorrent-exporter.sh)"
+type=update bash -c "$(curl -fsSL https://raw.githubusercontent.com/observer96/ProxmoxVE/refs/heads/nvidia-regression-2/tools/addon/qbittorrent-exporter.sh)"
 UPDATEEOF
   chmod +x /usr/local/bin/update_qbittorrent-exporter
   msg_ok "Created update script (/usr/local/bin/update_qbittorrent-exporter)"
